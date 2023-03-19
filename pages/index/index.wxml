@@ -1,2 +1,4 @@
-<!-- index.wxml -->
-<view>text标签相当于span标签 view标签相当于div标签</view>
+<view>{{msg}}</view>
+<view>{{num}}</view>
+<view>是否是女生：{{isGirl}}</view>
+<view>{{person.age +" "+ person.name}}</view>

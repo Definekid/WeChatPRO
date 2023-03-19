@@ -5,7 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    msg: "HELLO DEFINE!",
+    num: 1,
+    isGirl : true,
+    person:{
+      age: 18,
+      name: "DEFINE"
+    }
   },
 
   /**
