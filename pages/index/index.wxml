@@ -1,0 +1,2 @@
+<!-- index.wxml -->
+<view>text标签相当于span标签 view标签相当于div标签</view>
