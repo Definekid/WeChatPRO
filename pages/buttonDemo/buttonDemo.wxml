@@ -1,0 +1,53 @@
+<!--pages/buttonDemo/buttonDemo.wxml-->
+<!-- 
+    button 按钮
+    1. size 控制按钮大小
+        1. default 默认属性
+        2. mini 小尺寸
+    2. type 控制颜色 default灰色 primary绿色 warn红色
+    3. plain 按钮是否镂空，背景色透明
+    4. loading 名称前自带loading按钮
+
+ -->
+
+ 
+ 
+ <button size="mini">nihao</button>
+
+ <button type="primary">nihao</button>
+
+ <button type="warn">nihao</button>
+
+ <button loading>nihao</button>
+
+
+<!-- 
+    open-type:
+    1. contact 直接打开客服对话功能 需要在微信小程序的后台配置
+
+    2. share 转发当前的小程序到微信的朋友中   不能把小程序 分享到 朋友圈
+
+    3. getPhoneNumber 获取当前用户的手机号码信息 结合一个事件使用， 不是企业的小程序是没有权限获取手机号的
+        1. 绑定一个事件 bindgetphonenumber
+        2. 在事件的回调函数中
+        3. 获取的信息 已经加密过了 就需要用户自己搭建小程序的后台服务器，在后台服务器中进行解析 手机号码，再返回到小程序中
+
+    4. getUserInfo 获取当前用户的个人信息
+        1. 使用方法类似获取用户的手机号码
+
+    5. launchApp 在小程序当中 直接打开App
+        1. 需要在App中通过app的某个链接 打开小程序
+        2. 在小程序中再通过这个功能重新打开APP
+        
+    6. openSetting 打开小程序内置的 授权界面
+        1. 授权页面，只会出现用户使用过发权限
+    7. feedback 打开小程序内置的 意见反馈页面
+ -->
+
+<button open-type="contact">contact</button>
+<button open-type="share">share</button>
+<button open-type="getPhoneNumber"  bindgetphonenumber="getPhoneNumber">getPhoneNumber</button>
+<button open-type="getUserInfo"  bindgetuserinfo="getUserInfo">getUserInfo</button>
+<button open-type="launchApp">launchApp</button>
+<button open-type="openSetting">openSetting</button>
+<button open-type="feedback">feedback</button>

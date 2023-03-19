@@ -1,4 +1,2 @@
-<view>{{msg}}</view>
-<view>{{num}}</view>
-<view>是否是女生：{{isGirl}}</view>
-<view>{{person.age +" "+ person.name}}</view>
+<!--pages/index/index.wxml-->
+<text>pages/index/index.wxml</text>

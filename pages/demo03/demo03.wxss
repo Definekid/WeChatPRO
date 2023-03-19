@@ -1,0 +1,5 @@
+/* pages/demo03/demo03.wxss */
+image{
+    box-sizing: border-box;
+    
+}

@@ -1,0 +1,41 @@
+/* pages/demo02/demo02.wxss */
+
+// 定义less变量
+@color: yellow;
+
+
+/*
+样式文件引入：
+1. 引入代码是通过 @import 来引入
+2. 路径只能写相对路径
+ */
+
+@import "../../style/common.wxss";
+
+
+/*
+1. 小程序中不需要主动来引入样式文件
+2. 需要把页面中某些元素的单位 由 px 改为 rpx
+
+若存在设计稿未知:
+    1.设计稿page上面存在一个元素 宽度为 100px
+    2.拿以上需求 去实现 不同宽度的页面适配
+
+    page px = 750 rpx
+    100 px = 750 / page *100
+
+    利用一个属性 calc  css和wxss都支持的属性
+        1.数值和rpx之间不能留空格
+        2.运算符两边也不要留空格
+
+
+
+ */
+view.test01 {
+    /* width: 200rpx; */
+    height: 100rpx;
+    font-size: 24rpx;
+    color: @color;
+    background-color: skyblue;
+    width: calc(750rpx*100/375);
+}

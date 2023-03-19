@@ -1,0 +1,15 @@
+<!--pages/demo02/demo02.wxml-->
+
+<view class="test01">12121222</view>
+
+<view>test02</view>
+
+<!-- 
+    rich-text 富文本标签
+    1 nodes属性实现
+     1. 接受标签字符串
+     2. 接受对象数组
+ -->
+
+ <rich-text nodes="{{html}}"></rich-text>
+

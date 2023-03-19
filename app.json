@@ -1,20 +1,30 @@
 {
-    "pages": [
-        "pages/index/index",
-        "pages/img/img",
-        "pages/mine/mine",
-        "pages/search/search"
-    ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "微信小程序", 
-        "navigationBarTextStyle": "black",
-        "enablePullDownRefresh": true
-    },
-    "style": "v2",
-    "tabBar": {
-      "list": [{
+  "pages": [
+    "pages/radioDemo/radioDemo",
+    "pages/iconDemo/iconDemo",
+    "pages/buttonDemo/buttonDemo",
+    "pages/demo02/demo02",
+    "pages/navigatorDemo/navigatorDemo",
+    "pages/swiperDemo/swiperDemo",
+    "pages/demo03/demo03",
+    "pages/demo01/demo01",
+    "pages/demo00/demo00",
+    "pages/index/index",
+    "pages/img/img",
+    "pages/mine/mine",
+    "pages/search/search"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "微信小程序",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "style": "v2",
+  "tabBar": {
+    "list": [
+      {
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "icon/_home.png",
@@ -37,14 +47,13 @@
         "text": "搜索",
         "iconPath": "icon/_search.png",
         "selectedIconPath": "icon/search.png"
-      }],
-      "color": "#CCC",
-      "selectedColor": "#42a5f5",
-      "backgroundColor": "#f1997d",
-      "borderStyle": "black",
-      "position": "bottom"
-    },
-    
-    "sitemapLocation": "sitemap.json"
-    
+      }
+    ],
+    "color": "#CCC",
+    "selectedColor": "#42a5f5",
+    "backgroundColor": "#f1997d",
+    "borderStyle": "black",
+    "position": "bottom"
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -1,11 +1,31 @@
-// pages/index/index.js
+// index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    msg: "HELLO DEFINE!",
+    num: 1,
+    isGirl: true,
+    person: {
+      age: 18,
+      name: "DEFINE"
+    },
+    isChecked: true,
+    list: [
+      {
+        id: 0,
+        name: "孙悟空"
+      },
+      {
+        id: 1,
+        name: "猪八戒"
+      }, {
+        id: 2,
+        name: "沙僧"
+      }
+    ]
   },
 
   /**

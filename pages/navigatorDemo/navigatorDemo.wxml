@@ -1,0 +1,20 @@
+<!--pages/navigatorDemo/navigatorDemo.wxml-->
+
+<!--
+    导航组件 navigator (块级元素，默认换行，宽高设置有效果)
+    1. url 要跳转的页面路径 绝对路径 相对路径
+    2. target 要跳转到当前的小程序， 还是其它的小程序页面
+       self 默认值 自己 小程序页面
+       miniProgram 其它小程序的页面
+    3. open-type 跳转方式
+        1. navigate 默认值 保留当前页面，跳转到应用内某个界面， 但是不能跳转到 tabber 页面
+        2. redirect 关闭当前页面，跳转到应用内的某个页面，但是不允许跳转到 tabber 页面
+        3. switchTab 跳转到tabBar页面，并关闭其它所有非tabBar 界面
+        4. reLaunch 关闭所有页面，打开应用内的某个页面
+        5. navigateBack 关闭当前页面，返回上一页面或多级页面，可通过getCurrentPages()获取当前的页面，决定需要返回几层
+        6. exit 退出小程序，target="miniProgram"时生效
+-->
+<navigator open-type="navigate" url="/pages/swiperDemo/swiperDemo">CHOOSE ME navigate</navigator>
+<navigator open-type="redirect" url="/pages/swiperDemo/swiperDemo">CHOOSE ME redirect</navigator>
+<navigator open-type="switchTab" url="/pages/index/index">CHOOSE ME switchTab</navigator>
+<navigator open-type="reLaunch" url="/pages/swiperDemo/swiperDemo">CHOOSE ME reLaunch</navigator>

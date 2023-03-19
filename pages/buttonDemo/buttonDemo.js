@@ -1,11 +1,17 @@
-// pages/index/index.js
+// pages/buttonDemo/buttonDemo.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    // 获取用户的手机号码信息
+  },
+  getPhoneNumber(e) {
+    console.log(e);
+  },
+  getUserInfo(e) {
+    console.log(e);
   },
 
   /**

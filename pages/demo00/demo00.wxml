@@ -1,0 +1,123 @@
+<!-- 
+    1. text相当于span
+    2. view相当于div
+    3. checkbox 就是原来的复选框
+ -->
+
+<view>{{msg}}</view>
+<view>{{num}}</view>
+<view>是否是女生：{{isGirl}}</view>
+<view>{{person.age +" "+ person.name}}</view>
+
+<!-- 在标签中自定义属性使用 -->
+<view data-num="{{num}}" class="" hover-class="none" hover-stop-propagation="false">
+    自定义
+</view>
+
+<!-- 
+    使用bool类型当字符串时，
+    1. 字符串和花括号之间不要出现空格
+ -->
+<view hover-class="none" hover-stop-propagation="false">
+    <checkbox checked="{{isChecked}}"></checkbox>
+</view>
+
+
+<!-- 
+    运算 =》 表达式
+    1. 可以在花括号中加入表达式 -"语句"
+    2. 表达式
+        指一些简单运算 数字运算，字符串运算，拼接，逻辑运算
+    3. 语句
+        1. if else
+        2. switch
+        3. do while
+        4. for
+ -->
+
+<view>{{3+5}}</view>
+<view>{{"3"+"5"}}</view>
+<view>{{11 % 2===0 ? "偶数":"奇数"}}</view>
+
+
+
+<!-- 
+    列表循环
+    1. wx:for="{{数组}}" 
+        wx:for-item="循环项的名称"
+        wx:for-index="循环项的索引"
+    2. wx:key="唯一值"用来提高列表渲染性能
+        1.wx:key 绑定一个普通的字符串的时候，这个字符串肯定时循环数组中对象的唯一属性
+        2.wx:key = "*this" 就表示你的数组是一个普通的数组， *this表示是循环项
+            [1,2,3],["1","22","asdx"]
+    3. 当出现嵌套循环时，绑定的项名称 不要重名
+        wx:for-item="item" wx:for-index="index"
+    4. 默认情况下，我们不写
+        wx:for-item="item" wx:for-index="index"
+        小程序也会把 循环项的名称 和 索引的名称 item 和 index
+        只有一层循环的话，这些代码可以省略
+    
+    对象循环
+    1.  wx:for="{{对象}}" 
+        wx:for-item="对象的值"
+        wx:for-index="对象的属性"
+    2. 循环对象的时候 最好把 item和index的名称都修改一下
+         wx:for-item="value" wx:for-index="key"
+ -->
+<view>
+    <view wx:for="{{list}}" wx:for-item="item" wx:for-index="index">
+        索引：{{index}}
+        --
+        值 ：{{item.name}}
+    </view>
+</view>
+
+<view>
+    <view wx:for="{{person}}" wx:for-item="item" wx:for-index="index" wx:key="name">
+        索引：{{index}}
+        --
+        值 ：{{item}}
+    </view>
+</view>
+
+
+<!-- 
+    block 标签
+    1. 占位符标签
+    2. 写代码的时候 可以看到这些标签的存在
+    3. 页面渲染时 小程序会把它移除
+ -->
+
+<block>
+    <view wx:for="{{list}}" wx:for-item="item" wx:for-index="index" class="mylist">
+        索引：{{index}}
+        --
+        值 ：{{item.name}}
+    </view>
+</block>
+
+
+<!-- 
+    条件渲染
+    1. wx:if="{{true/false}}" ..elif..else        => 当标签不是频繁的切换显示 优先使用 wx:if 直接把标签从页面结构给移除掉
+    2. hidden                                     => 当标签频繁切换显示的时候 优先使用hidden 通过加样式的方式来切换显示
+        在标签上直接加入属性hidden
+        hidden="{{true}}"
+    注意：hidden不要和 display 一起使用
+  -->
+
+<view>
+    <view>条件渲染</view>
+    <view wx:if="{{true}}">显示</view>
+    <view wx:if="{{false}}">隐藏</view>
+
+    <view>-----------------</view>
+    <view wx:if="{{false}}">1</view>
+    <view wx:elif="{{false}}">2</view>
+    <view wx:else>3</view>
+
+    <view>-----------------</view>
+    <view hidden>hidden1</view>
+    <view hidden="{{flase}}">hidden2</view>
+    <view>-----------------</view>
+</view>
