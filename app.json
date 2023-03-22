@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/pageLife/pageLife",
+    "pages/defineSelf/defineSelf",
     "pages/radioDemo/radioDemo",
     "pages/iconDemo/iconDemo",
     "pages/buttonDemo/buttonDemo",
